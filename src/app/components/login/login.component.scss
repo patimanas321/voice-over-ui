@@ -1,0 +1,81 @@
+:host {
+    flex: 1;
+    display: flex;
+}
+
+.outer-shell{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .inner-shell{
+        width: 100%;
+        max-width: 500px;
+        min-height: 600px;
+        box-sizing: border-box;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+
+        background-color: #1C2E33;
+        background-image: radial-gradient(#3f6873, #2d4a52, #1C2E33);
+        border-radius: 5px;
+    }
+
+    header, main, footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    main{
+        flex: 2;
+
+        div{
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 5px;
+        }
+    }
+
+    footer{
+        color: #ffffff;
+    }
+
+    header, footer{
+        flex: 1;
+        margin: 10px;
+    }
+}
+
+input{
+    max-width: 350px;
+    width: 100%;
+    border: 1px solid #B6C9CB;
+    border-radius: 7px;
+    padding: 10px;
+    font-size: 20px;
+    box-shadow: 0 0 5px grey;
+}
+
+button.login-button{
+    font-size: 20px;
+    padding: 15px;
+    width: 100%;
+    max-width: 350px;
+    border: 2px solid #B6C9CB;
+    border-radius: 7px;
+    box-shadow: 0 0 5px grey;
+}
+
+.login-button{
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 30px;
+    color: #ffffff;
+}
