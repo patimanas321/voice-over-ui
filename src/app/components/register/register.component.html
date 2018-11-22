@@ -1,21 +1,27 @@
 <div class="work-area-container">
     <div class="work-area">
         <header>
-           <app-logo></app-logo>
+            <app-logo></app-logo>
         </header>
         <main>
             <div>
                 <input type="tel" placeholder="phone no">
             </div>
             <div>
+                <input type="email" placeholder="email">
+            </div>
+            <div>
                 <input type="password" placeholder="password">
             </div>
             <div>
-                <a href="javascript:void(0);" (click)="login()" class="login-button">login</a>
+                <input type="password" placeholder="re-enter password">
+            </div>
+            <div>
+                <a href="javascript:void(0);" class="login-button">register</a>
             </div>
         </main>
         <footer>
-            <span>New User? Sign up <a [routerLink]="['/register']">here</a></span>
+            <span>Already an user? Sign in <a [routerLink]="['/login']">here</a></span>
         </footer>
     </div>
 </div>

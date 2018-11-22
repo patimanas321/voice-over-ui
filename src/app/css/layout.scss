@@ -23,8 +23,31 @@ app-root{
     background-image: radial-gradient(#c2d6d6, #85adad, #527a7a);
 }
 
-.app-container{
+.app-container {
     display: flex;
     flex: 1;
     padding: 10px;
+}
+
+.work-area-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.work-area {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    min-height: 500px;
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+
+    background-color: #1C2E33;
+    background-image: radial-gradient(#3f6873, #2d4a52, #1C2E33);
+    border-radius: 5px;
 }
