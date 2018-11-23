@@ -9,7 +9,7 @@ app.use(express.static(__dirname + '/dist/Notes'));
 
 app.get('/*', function(req,res) {
     
-res.sendFile(path.join(__dirname+'/dist/Notes/index.html'));
+res.sendFile(path.join(__dirname+'/dist/voice-over-ui/index.html'));
 });
 
 // Start the app by listening on the default Heroku port
