@@ -38,9 +38,8 @@ app-root{
 
 .work-area {
     width: 100%;
-    height: auto;
-    max-width: 400px;
-    min-height: 500px;
+    height: 100%;
+    max-width: 500px;
     box-sizing: border-box;
     padding: 10px;
     display: flex;
@@ -50,4 +49,10 @@ app-root{
     background-color: #1C2E33;
     background-image: radial-gradient(#3f6873, #2d4a52, #1C2E33);
     border-radius: 5px;
+}
+
+.errorPanel{
+    display: flex;
+    justify-content: center;
+    color: red;
 }

@@ -4,21 +4,21 @@
 }
 
 .work-area-container{
-    header, main, footer {
+    header, form, footer {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
 
-    header, main, footer {
+    header, form, footer {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
 
-    main{
+    form{
         flex: 2;
         margin: 10px;
 
@@ -48,19 +48,16 @@ input{
     box-shadow: 0 0 5px grey;
 }
 
-button.login-button{
-    font-size: 20px;
-    padding: 15px;
-    width: 100%;
-    max-width: 350px;
-    border: 2px solid #B6C9CB;
-    border-radius: 7px;
-    box-shadow: 0 0 5px grey;
+input.error{
+    background-color: #fccfcf;
+    border-color: #F76D6D;
 }
 
-.login-button{
-    margin-top: 20px;
-    text-decoration: none;
+button.login-button{
     font-size: 30px;
+    padding: 15px;
+    border: 0;
+    background: transparent;
     color: #ffffff;
+    cursor: pointer;
 }

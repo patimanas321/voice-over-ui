@@ -1,19 +1,19 @@
 <div class="work-area-container">
     <div class="work-area">
         <header>
-           <app-logo></app-logo>
+            <app-logo></app-logo>
         </header>
-        <main>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
             <div>
-                <input type="tel" placeholder="phone no">
+                <input type="tel" formControlName="phNo" placeholder="phone no" [ngClass]="{'error' : phNo.invalid && (phNo.dirty || phNo.touched)}">
             </div>
             <div>
-                <input type="password" placeholder="password">
+                <input type="password" formControlName="password" placeholder="password" [ngClass]="{'error' : password.invalid && (password.dirty || password.touched)}">
             </div>
             <div>
-                <a href="javascript:void(0);" (click)="login()" class="login-button">login</a>
+                <button type="submit" class="login-button">login</button>
             </div>
-        </main>
+        </form>
         <footer>
             <span>New User? Sign up <a [routerLink]="['/register']">here</a></span>
         </footer>

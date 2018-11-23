@@ -3,23 +3,30 @@
         <header>
             <app-logo></app-logo>
         </header>
-        <main>
+
+        <form [formGroup]="regsiterForm" (ngSubmit)="onSubmit()">
             <div>
-                <input type="tel" placeholder="phone no">
+                <input type="text" formControlName="firstName" placeholder="first name" [ngClass]="{'error' : firstName.invalid && (firstName.dirty || firstName.touched)}">
             </div>
             <div>
-                <input type="email" placeholder="email">
+                <input type="text" formControlName="lastName" placeholder="last name">
             </div>
             <div>
-                <input type="password" placeholder="password">
+                <input type="tel" formControlName="phNo" placeholder="phone no" [ngClass]="{'error' : phNo.invalid && (phNo.dirty || phNo.touched)}">
             </div>
             <div>
-                <input type="password" placeholder="re-enter password">
+                <input type="password" formControlName="password" placeholder="password" [ngClass]="{'error' : password.invalid && (password.dirty || password.touched)}">
             </div>
             <div>
-                <a href="javascript:void(0);" class="login-button">register</a>
+                <input type="password" formControlName="confirmPassword" placeholder="re-enter password" [ngClass]="{'error' : (confirmPassword.invalid || (confirmPassword.value != password.value)) && (confirmPassword.dirty || confirmPassword.touched)}">
             </div>
-        </main>
+            <div class="errorPanel" [hidden]="!errorMessage">
+                <span>{{errorMessage}}</span>
+            </div>
+            <div>
+                <button type="submit" class="login-button">register</button>
+            </div>
+        </form>
         <footer>
             <span>Already an user? Sign in <a [routerLink]="['/login']">here</a></span>
         </footer>
