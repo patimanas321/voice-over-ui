@@ -1,32 +1,34 @@
 <div class="work-area-container">
     <div class="work-area">
-        <header>
-            <app-logo></app-logo>
-        </header>
+        <main>
+            <div>
+                <app-logo></app-logo>
+            </div>
 
-        <form [formGroup]="regsiterForm" (ngSubmit)="onSubmit()">
-            <div>
-                <input type="text" formControlName="firstName" placeholder="first name" [ngClass]="{'error' : firstName.invalid && (firstName.dirty || firstName.touched)}">
-            </div>
-            <div>
-                <input type="text" formControlName="lastName" placeholder="last name">
-            </div>
-            <div>
-                <input type="tel" formControlName="phNo" placeholder="phone no" [ngClass]="{'error' : phNo.invalid && (phNo.dirty || phNo.touched)}">
-            </div>
-            <div>
-                <input type="password" formControlName="password" placeholder="password" [ngClass]="{'error' : password.invalid && (password.dirty || password.touched)}">
-            </div>
-            <div>
-                <input type="password" formControlName="confirmPassword" placeholder="re-enter password" [ngClass]="{'error' : (confirmPassword.invalid || (confirmPassword.value != password.value)) && (confirmPassword.dirty || confirmPassword.touched)}">
-            </div>
-            <div class="errorPanel" [hidden]="!errorMessage">
-                <span>{{errorMessage}}</span>
-            </div>
-            <div>
-                <button type="submit" class="login-button">register</button>
-            </div>
-        </form>
+            <form [formGroup]="regsiterForm" (ngSubmit)="onSubmit()">
+                <div>
+                    <input type="text" formControlName="firstName" placeholder="first name" [ngClass]="{'error' : firstName.invalid && (firstName.dirty || firstName.touched)}">
+                </div>
+                <div>
+                    <input type="text" formControlName="lastName" placeholder="last name">
+                </div>
+                <div>
+                    <input type="tel" formControlName="phNo" placeholder="phone no" [ngClass]="{'error' : phNo.invalid && (phNo.dirty || phNo.touched)}">
+                </div>
+                <div>
+                    <input type="password" formControlName="password" placeholder="password" [ngClass]="{'error' : password.invalid && (password.dirty || password.touched)}">
+                </div>
+                <div>
+                    <input type="password" formControlName="confirmPassword" placeholder="re-enter password" [ngClass]="{'error' : (confirmPassword.invalid || (confirmPassword.value != password.value)) && (confirmPassword.dirty || confirmPassword.touched)}">
+                </div>
+                <div class="errorPanel" [hidden]="!errorMessage">
+                    <span>{{errorMessage}}</span>
+                </div>
+                <div>
+                    <button type="submit" class="login-button">register</button>
+                </div>
+            </form>
+        </main>
         <footer>
             <span>Already an user? Sign in <a [routerLink]="['/login']">here</a></span>
         </footer>
