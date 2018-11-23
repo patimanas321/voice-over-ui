@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http'; 
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app.routing.module';
 import { APP_INITIALIZER } from '@angular/core';
@@ -9,6 +10,8 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { ApplicationLogoComponent } from './components/app-logo/app-logo.component';
 import { RegisterComponent } from './components/register/register.component';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AppHttpIntercepter } from './intercepters/http.intercepter';
 
 @NgModule({
   declarations: [
@@ -21,6 +24,7 @@ import { RegisterComponent } from './components/register/register.component';
     BrowserModule,
     FormsModule,
     HttpModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [
@@ -28,7 +32,12 @@ import { RegisterComponent } from './components/register/register.component';
     {
       provide: APP_INITIALIZER,
       useFactory: initializeApp,
-      deps: [AppConfig], 
+      deps: [AppConfig],
+      multi: true
+    },
+    {
+      provide: HTTP_INTERCEPTORS, 
+      useClass: AppHttpIntercepter, 
       multi: true
     }
   ],
