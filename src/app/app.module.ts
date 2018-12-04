@@ -13,6 +13,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppHttpIntercepter } from './intercepters/http.intercepter';
 import { HomeComponent } from './components/home/home.component';
+import { GoogleSigninComponent } from './components/google-signin/google-signin.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HomeComponent } from './components/home/home.component';
     LoginComponent,
     RegisterComponent,
     HomeComponent,
-    ApplicationLogoComponent
+    ApplicationLogoComponent,
+    GoogleSigninComponent
   ],
   imports: [
     BrowserModule,

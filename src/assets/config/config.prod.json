@@ -1,3 +1,9 @@
 {   
-    "apiServer": "https://voice-over-api.herokuapp.com"
+    "apiServer": "https://voice-over-api.herokuapp.com",
+    "auth": {
+        "google": {
+            "client_id": "539021818012-0rf2d8tfbsln699ruj4lbps69u9htcu9.apps.googleusercontent.com",
+            "redirect_uri": "https://voice-over-ui.herokuapp.com/home"
+        }
+    }
 }
