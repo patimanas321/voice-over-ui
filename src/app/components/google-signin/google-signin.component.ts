@@ -17,7 +17,7 @@ export class GoogleSigninComponent {
 
     }
 
-    private id: string = 'google-signin2';
+    id: string = 'btnGoogleSignin';
 
     // Init params
     private clientId: string = AppConfig.settings.auth.google.client_id;
